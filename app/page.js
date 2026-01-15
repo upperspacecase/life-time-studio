@@ -20,7 +20,7 @@ export default function Page() {
         >
           <source src="/taytodd_earth_is_center_of_frame_gently_rotating_in_space_we__b0192717-f368-4e9b-aec7-29447b62f96c_2.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Logo - Fixed position, aligned with content */}
