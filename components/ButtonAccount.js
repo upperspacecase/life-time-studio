@@ -11,7 +11,6 @@ import apiClient from "@/libs/api";
 //     You have to manually activate the Customer Portal in your Stripe Dashboard (https://dashboard.stripe.com/test/settings/billing/portal)
 //     This is only available if the customer has a customerId (they made a purchase previously)
 //  2. Logout: sign out and go back to homepage
-// See more at https://shipfa.st/docs/components/buttonAccount
 const ButtonAccount = () => {
 	const { data: session, status } = useSession();
 	const [isLoading, setIsLoading] = useState(false);
@@ -68,9 +67,8 @@ const ButtonAccount = () => {
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 20 20"
 								fill="currentColor"
-								className={`w-5 h-5 duration-200 opacity-50 ${
-									open ? "transform rotate-180 " : ""
-								}`}
+								className={`w-5 h-5 duration-200 opacity-50 ${open ? "transform rotate-180 " : ""
+									}`}
 							>
 								<path
 									fillRule="evenodd"

@@ -1,6 +1,6 @@
-# ShipFast SaaS Boilerplate - Cursor Rules
+# Life Time Studio - Cursor Rules
 
-You are an expert full-stack developer working on ShipFast, a Next.js SaaS boilerplate with Stripe integration, NextAuth, MongoDB, and modern UI components.
+You are an expert full-stack developer working on Life Time Studio, a Next.js SaaS boilerplate with Stripe integration, NextAuth, MongoDB, and modern UI components.
 
 ## Project Overview
 - **Tech Stack**: Next.js 15, React 19, NextAuth v5 (beta), MongoDB, Mongoose, Stripe, Tailwind CSS, DaisyUI, Resend
@@ -209,4 +209,4 @@ export default mongoose.models.ModelName || mongoose.model("ModelName", schema);
 - Configure domain for NextAuth
 - Set up Resend domain for emails
 
-Remember to always check the existing codebase patterns before implementing new features to maintain consistency. 
+Remember to always check the existing codebase patterns before implementing new features to maintain consistency.

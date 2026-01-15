@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import config from "@/config";
 
 // List of features to display:
 // - name: name of the feature
@@ -443,7 +444,7 @@ const FeaturesListicle = () => {
           <div className="text-base-content/80 leading-relaxed mb-8 lg:text-lg">
             {/* 💡 COPY TIP: Explain how your product delivers what you promise in the headline. */}
             Login users, process payments and send emails at lightspeed. Spend
-            your time building your startup, not integrating APIs. ShipFast
+            your time building your startup, not integrating APIs. {config.appName}{" "}
             provides you with the boilerplate code you need to launch, FAST.
           </div>
         </div>
@@ -461,20 +462,18 @@ const FeaturesListicle = () => {
               className={`flex flex-col items-center justify-center gap-3 select-none cursor-pointer p-2 duration-200 group`}
             >
               <span
-                className={`duration-100 ${
-                  featureSelected === feature.name
-                    ? "text-primary"
-                    : "text-base-content/30 group-hover:text-base-content/50"
-                }`}
+                className={`duration-100 ${featureSelected === feature.name
+                  ? "text-primary"
+                  : "text-base-content/30 group-hover:text-base-content/50"
+                  }`}
               >
                 {feature.svg}
               </span>
               <span
-                className={`font-semibold text-sm ${
-                  featureSelected === feature.name
-                    ? "text-primary"
-                    : "text-base-content/50"
-                }`}
+                className={`font-semibold text-sm ${featureSelected === feature.name
+                  ? "text-primary"
+                  : "text-base-content/50"
+                  }`}
               >
                 {feature.name}
               </span>

@@ -55,9 +55,7 @@ const list = [
     // REQUIRED
     text: "Really easy to use. The tutorials are really useful and explains how everything works. Hope to ship my next project really fast!",
     // REQUIRED — use refTypes.other if you don't want to display an icon
-    type: refTypes.twitter,
-    // Optional, link to the person's testimonial. It's more trustable
-    link: "https://twitter.com/marc_louvion",
+    type: refTypes.other,
     // Optional, a statically imported image (usually from your public folder—recommended) or a link to the person's avatar. Shows a fallback letter if not provided
     img: "https://pbs.twimg.com/profile_images/1514863683574599681/9k7PqDTA_400x400.jpg",
     // You can display video testimonials to build more trust. Just swap the type above to "video" and add at least the video source below
@@ -74,8 +72,7 @@ const list = [
     username: "wahab",
     name: "Wahab Shaikh",
     text: "Easily saves 15+ hrs for me setting up trivial stuff. Now, I can directly focus on shipping features rather than hours of setting up the same technologies from scratch. Feels like a super power! :D",
-    type: refTypes.productHunt,
-    link: "https://www.producthunt.com/products/shipfast-2/reviews?review=667971",
+    type: refTypes.other,
   },
   {
     name: "Sean",
@@ -86,8 +83,7 @@ const list = [
     username: "krishna",
     name: "Krishna Kant",
     text: "Finally a good boilerplate for Nextjs, now I dont have to cry about it comparing with laravel ecosystem.",
-    type: refTypes.productHunt,
-    link: "https://www.producthunt.com/posts/shipfast-2?comment=2707061",
+    type: refTypes.other,
   },
   {
     username: "imgyf",
@@ -121,8 +117,7 @@ const list = [
     username: "dan",
     name: "Dan Mindru",
     text: "Probably one of the most powerful things you can 'npm install' that I've seen",
-    type: refTypes.productHunt,
-    link: "https://www.producthunt.com/posts/shipfast-2?comment=2706763",
+    type: refTypes.other,
   },
   // The last testimonial is featured on big devices (span 2 columns + big font) 👇
   {
@@ -375,9 +370,8 @@ const Testimonials11 = () => {
                         <Image
                           className="w-12 h-12 rounded-full object-cover"
                           src={list[list.length - 1].img}
-                          alt={`${
-                            list[list.length - 1].name
-                          }'s testimonial for ${config.appName}`}
+                          alt={`${list[list.length - 1].name
+                            }'s testimonial for ${config.appName}`}
                           width={48}
                           height={48}
                         />
