@@ -1,10 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import ExploreModal from "@/components/ExploreModal";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
@@ -43,12 +44,12 @@ export default function Page() {
               <em className="italic">Time well lived.</em>
             </p>
 
-            <Link
-              href="/dashboard"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="inline-block mt-8 text-amber-400 hover:text-amber-300 transition-colors text-lg tracking-wide font-serif"
             >
               Explore
-            </Link>
+            </button>
           </div>
         </section>
 
@@ -104,6 +105,9 @@ export default function Page() {
           aria-label="About"
         />
       </nav>
+
+      {/* Explore Modal */}
+      <ExploreModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
