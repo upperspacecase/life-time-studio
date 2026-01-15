@@ -9,13 +9,17 @@ export default function Page() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* Background Image - Fixed */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/hero-bg.png')",
-        }}
-      >
+      {/* Background Video - Fixed */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/taytodd_earth_is_center_of_frame_gently_rotating_in_space_we__b0192717-f368-4e9b-aec7-29447b62f96c_2.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
