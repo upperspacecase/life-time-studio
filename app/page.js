@@ -1,45 +1,54 @@
 import Link from "next/link";
-import ButtonSignin from "@/components/ButtonSignin";
-import config from "@/config";
 
 export default function Page() {
   return (
-    <>
-      <header className="p-4 flex justify-end max-w-7xl mx-auto">
-        <ButtonSignin text="Login" />
-      </header>
-      <main>
-        <section className="flex flex-col items-center justify-center text-center gap-12 px-8 py-24">
-          <h1 className="text-3xl font-extrabold">{config.appName} ⚡️</h1>
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/hero-bg.png')",
+        }}
+      >
+        {/* Subtle dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/20"></div>
+      </div>
 
-          <p className="text-lg opacity-80">
-            The start of your new startup... What are you gonna build?
+      {/* Navigation */}
+      <header className="relative z-10 p-6 md:p-8">
+        <button
+          className="flex flex-col gap-1.5 group"
+          aria-label="Menu"
+        >
+          <span className="w-6 h-0.5 bg-white transition-all group-hover:w-8"></span>
+          <span className="w-8 h-0.5 bg-white"></span>
+          <span className="w-5 h-0.5 bg-white transition-all group-hover:w-8"></span>
+        </button>
+      </header>
+
+      {/* Hero Content */}
+      <main className="relative z-10 flex items-center min-h-[calc(100vh-120px)] px-6 md:px-16 lg:px-24">
+        <div className="max-w-2xl">
+          <p className="text-white text-xl md:text-2xl lg:text-3xl font-light leading-relaxed tracking-wide lowercase">
+            time is humanity&apos;s most precious resource. we build tools that simplify daily life, deepen real relationships, and reclaim moments for what truly matters.{" "}
+            <em className="italic">Time well lived.</em>
           </p>
 
           <Link
-            className="btn btn-primary"
             href="/dashboard"
+            className="inline-block mt-8 text-cyan-400 hover:text-cyan-300 transition-colors text-lg tracking-wide"
           >
-            Get Started{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
-                clipRule="evenodd"
-              />
-            </svg>
+            Explore
           </Link>
-
-          <Link href="/blog" className="link link-hover text-sm">
-            Fancy a blog?
-          </Link>
-        </section>
+        </div>
       </main>
-    </>
+
+      {/* Dot Navigation */}
+      <nav className="absolute right-6 md:right-10 top-1/2 -translate-y-1/2 z-10 flex flex-col gap-3">
+        <button className="w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white transition-colors" aria-label="Section 1"></button>
+        <button className="w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white transition-colors" aria-label="Section 2"></button>
+        <button className="w-2.5 h-2.5 rounded-full bg-cyan-400" aria-label="Section 3 (current)"></button>
+      </nav>
+    </div>
   );
 }
